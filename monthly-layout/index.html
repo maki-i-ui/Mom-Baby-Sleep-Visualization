@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>母と子の睡眠記録</title>
+    <meta name="description" content="妊娠から産後まで、母親と子どもそれぞれの睡眠を月ごとに記録した作品です。">
+    <meta property="og:title" content="母と子の睡眠記録">
+    <meta property="og:description" content="妊娠から産後まで、母親と子どもそれぞれの睡眠を月ごとに記録した作品です。眠りの断片と時間の流れを体験してください。">
+    <meta property="og:image" content="https://maki-i-ui.github.io/Mom-Baby-Sleep-Visualization/og-image.png">
+    <meta property="og:url" content="https://maki-i-ui.github.io/Mom-Baby-Sleep-Visualization/monthly-layout/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://maki-i-ui.github.io/Mom-Baby-Sleep-Visualization/og-image.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/typography.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/controls.css">
+</head>
+<body>
+    <div id="sky-layer" aria-hidden="true">
+        <div id="sky-layer-current" class="sky-layer-pane"></div>
+        <div id="sky-layer-next" class="sky-layer-pane"></div>
+    </div>
+    <aside class="viewport-notice" aria-label="閲覧環境の推奨">
+      <p class="viewport-notice-text">
+        この作品は画面の広い環境（パソコンやタブレットなど）での閲覧を推奨します。
+      </p>
+    </aside>
+    <div id="intro"></div>
+    <div id="monthly-spirals"></div>
+
+    <footer class="site-footer">
+      <p class="site-footer-copy">© 2026 maki-i. All rights reserved.</p>
+      <p class="site-footer-note">
+        本作品に含まれる文章・ビジュアル・プログラムの無断利用を禁じます。
+      </p>
+      <p class="site-footer-credits">
+        Built with <a href="https://p5js.org/" rel="noopener noreferrer">p5.js</a> /
+        <a href="https://fonts.google.com/" rel="noopener noreferrer">Google Fonts</a>
+      </p>
+    </footer>
+
+    <button id="toggle-button" hidden>設定パネルを開く</button>
+
+    <div id="controls" hidden>
+        <h2>設定</h2>
+
+        <h3>期間設定</h3>
+        <div class="control-group">
+            <div class="date-input-group">
+                <label for="startDatePicker">開始日:</label>
+                <input type="date" id="startDatePicker">
+            </div>
+            <div class="date-input-group">
+                <label for="endDatePicker">終了日:</label>
+                <input type="date" id="endDatePicker">
+            </div>
+            <button id="applyDateRangeButton">期間を適用</button>
+        </div>
+        <div class="control-group">
+            <label for="pregnancyStartDatePicker">妊娠開始日:</label>
+            <input type="date" id="pregnancyStartDatePicker">
+        </div>
+        <div class="control-group">
+            <label for="childBirthDatePicker">子供の出生日:</label>
+            <input type="date" id="childBirthDatePicker">
+        <h3>表示設定</h3>
+        
+        <div class="control-group">
+            <label for="baseRadiusSlider">半径 (px):</label>
+            <div class="slider-with-value">
+                <input type="range" id="baseRadiusSlider" min="1" max="320" value="70">
+                <span id="baseRadiusValue">70</span>
+            </div>
+        </div>
+        
+        <div class="control-group">
+            <label for="ringSpacingSlider">日の間の隙間 (px):</label>
+            <div class="slider-with-value">
+                <input type="range" id="ringSpacingSlider" min="0" max="50" value="3">
+                <span id="ringSpacingValue">3</span>
+            </div>
+        </div>
+
+        <h3>睡眠ラインの太さ</h3>
+        <div class="control-group">
+            <label for="sleepLineWeightSlider">ラインの太さ:</label>
+            <div class="slider-with-value">
+                <input type="range" id="sleepLineWeightSlider" min="1" max="10" value="2">
+                <span id="sleepLineWeightValue">2</span> px
+            </div>
+        </div>
+
+        <h3>チャートの色</h3>
+        <div class="control-group">
+            <label for="sleepGradientMinPicker">グラデーション（短い睡眠）:</label>
+            <div class="color-picker-group">
+                <input type="color" id="sleepGradientMinPicker" value="#ff5050">
+                <input type="range" id="sleepGradientMinAlphaSlider" min="0" max="255" value="255">
+                <span id="sleepGradientMinAlphaValue">255</span> (透明度)
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="sleepGradientMaxPicker">グラデーション（長い睡眠）:</label>
+            <div class="color-picker-group">
+                <input type="color" id="sleepGradientMaxPicker" value="#5078ff">
+                <input type="range" id="sleepGradientMaxAlphaSlider" min="0" max="255" value="255">
+                <span id="sleepGradientMaxAlphaValue">255</span> (透明度)
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="sleepGradientMaxHoursSlider">グラデーション上限（時間）:</label>
+            <div class="slider-with-value">
+                <input type="range" id="sleepGradientMaxHoursSlider" min="1" max="12" step="0.5" value="7">
+                <span id="sleepGradientMaxHoursValue">7</span> 時間
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="textColorPicker">テキストの色:</label>
+            <input type="color" id="textColorPicker" value="#c5c0ec">
+        </div>
+        <div class="control-group">
+            <label for="emptyRecordColorPicker">記録なしの色:</label>
+            <div class="color-picker-group">
+                <input type="color" id="emptyRecordColorPicker" value="#ffffff">
+                <input type="range" id="emptyRecordAlphaSlider" min="0" max="255" value="30">
+                <span id="emptyRecordAlphaValue">30</span> (透明度)
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script type="module" src="sketch.js?v=20260728"></script>
+</body>
+</html>

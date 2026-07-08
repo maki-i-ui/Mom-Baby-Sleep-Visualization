@@ -1,0 +1,49 @@
+/* MUI default typography scale (Material Design) */
+:root {
+  --mui-font-family: "Roboto", "Noto Sans JP", "Helvetica", "Arial", sans-serif;
+
+  --mui-h5-size: 1.5rem;
+  --mui-h5-weight: 400;
+  --mui-h5-line-height: 1.334;
+  --mui-h5-letter-spacing: 0;
+
+  --mui-h6-size: 1.25rem;
+  --mui-h6-weight: 500;
+  --mui-h6-line-height: 1.6;
+  --mui-h6-letter-spacing: 0.0075em;
+
+  --mui-subtitle1-size: 1rem;
+  --mui-subtitle1-weight: 400;
+  --mui-subtitle1-line-height: 1.75;
+  --mui-subtitle1-letter-spacing: 0.00938em;
+
+  --mui-subtitle2-size: 0.875rem;
+  --mui-subtitle2-weight: 500;
+  --mui-subtitle2-line-height: 1.57;
+  --mui-subtitle2-letter-spacing: 0.00714em;
+
+  --mui-body1-size: 1rem;
+  --mui-body1-weight: 400;
+  --mui-body1-line-height: 1.5;
+  --mui-body1-letter-spacing: 0.00938em;
+
+  --mui-body2-size: 0.875rem;
+  --mui-body2-weight: 400;
+  --mui-body2-line-height: 1.43;
+  --mui-body2-letter-spacing: 0.01071em;
+
+  --mui-caption-size: 0.75rem;
+  --mui-caption-weight: 400;
+  --mui-caption-line-height: 1.66;
+  --mui-caption-letter-spacing: 0.03333em;
+
+  --mui-overline-size: 0.75rem;
+  --mui-overline-weight: 400;
+  --mui-overline-line-height: 2.66;
+  --mui-overline-letter-spacing: 0.08333em;
+
+  --mui-button-size: 0.875rem;
+  --mui-button-weight: 500;
+  --mui-button-line-height: 1.75;
+  --mui-button-letter-spacing: 0.02857em;
+}

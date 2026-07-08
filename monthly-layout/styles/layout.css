@@ -1,0 +1,14 @@
+#monthly-spirals {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  padding: 64px 40px 80px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  #monthly-spirals {
+    gap: 64px;
+    padding: 48px 16px 64px;
+  }
+}

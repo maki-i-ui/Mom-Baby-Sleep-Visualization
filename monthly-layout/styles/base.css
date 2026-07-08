@@ -1,0 +1,113 @@
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: var(--mui-font-family);
+  font-size: var(--mui-body1-size);
+  font-weight: var(--mui-body1-weight);
+  line-height: var(--mui-body1-line-height);
+  letter-spacing: var(--mui-body1-letter-spacing);
+  overflow-y: auto;
+  color: white;
+  background: #1a1040;
+  min-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+#sky-layer {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.sky-layer-pane {
+  position: absolute;
+  inset: 0;
+  will-change: opacity, background;
+}
+
+#sky-layer-next {
+  opacity: 0;
+}
+
+#intro,
+#monthly-spirals,
+#toggle-button,
+.viewport-notice {
+  position: relative;
+  z-index: 0;
+}
+
+.viewport-notice {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .viewport-notice {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 12px 16px;
+    text-align: center;
+    background: rgba(9, 0, 64, 0.92);
+    border-bottom: 1px solid rgba(197, 192, 236, 0.35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .viewport-notice-text {
+    margin: 0;
+    font-size: var(--mui-body2-size);
+    font-weight: var(--mui-body2-weight);
+    line-height: var(--mui-body2-line-height);
+    letter-spacing: var(--mui-body2-letter-spacing);
+    color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.site-footer {
+  position: relative;
+  z-index: 0;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+  text-align: center;
+}
+
+.site-footer-copy {
+  font-size: var(--mui-body2-size);
+  font-weight: var(--mui-body2-weight);
+  line-height: var(--mui-body2-line-height);
+  letter-spacing: var(--mui-body2-letter-spacing);
+  color: #c5c0ec;
+}
+
+.site-footer-note,
+.site-footer-credits {
+  margin-top: 12px;
+  font-size: var(--mui-caption-size);
+  font-weight: var(--mui-caption-weight);
+  line-height: var(--mui-caption-line-height);
+  letter-spacing: var(--mui-caption-letter-spacing);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.site-footer-credits a {
+  color: rgba(197, 192, 236, 0.75);
+  text-decoration: none;
+}
+
+.site-footer-credits a:hover {
+  color: #fff;
+}

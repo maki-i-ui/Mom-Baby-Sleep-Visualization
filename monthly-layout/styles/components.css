@@ -1,0 +1,531 @@
+/* Site Header */
+.site-header {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 80px 40px 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    padding: 64px 16px 0;
+  }
+
+  .site-footer {
+    padding: 48px 16px 64px;
+  }
+}
+
+.site-title {
+  font-size: var(--mui-h5-size);
+  font-weight: var(--mui-h5-weight);
+  line-height: var(--mui-h5-line-height);
+  letter-spacing: var(--mui-h5-letter-spacing);
+  color: #c5c0ec;
+  margin-bottom: 20px;
+}
+
+.site-framing {
+  font-size: var(--mui-body2-size);
+  font-weight: var(--mui-body2-weight);
+  line-height: var(--mui-body2-line-height);
+  letter-spacing: var(--mui-body2-letter-spacing);
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Intro */
+.intro {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 48px 40px 0;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: var(--mui-subtitle1-size);
+  font-weight: var(--mui-subtitle1-weight);
+  line-height: var(--mui-subtitle1-line-height);
+  letter-spacing: var(--mui-subtitle1-letter-spacing);
+  color: #c5c0ec;
+}
+
+.intro-text-en {
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.intro-text-ja {
+  font-size: var(--mui-body2-size);
+  font-weight: var(--mui-body2-weight);
+  line-height: var(--mui-body2-line-height);
+  letter-spacing: var(--mui-body2-letter-spacing);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Reading Guide */
+.guide-diagram {
+  margin: 0;
+  text-align: center;
+}
+
+.guide-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.guide-diagram-caption {
+  margin-top: 10px;
+  font-size: var(--mui-body2-size);
+  font-weight: var(--mui-body2-weight);
+  line-height: var(--mui-body2-line-height);
+  letter-spacing: var(--mui-body2-letter-spacing);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.guide-notes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 32px;
+}
+
+.guide-note-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: var(--mui-subtitle1-size);
+  font-weight: var(--mui-subtitle1-weight);
+  line-height: var(--mui-subtitle1-line-height);
+  letter-spacing: var(--mui-subtitle1-letter-spacing);
+  color: #c5c0ec;
+  margin-bottom: 6px;
+}
+
+.guide-note-num {
+  font-weight: var(--mui-body2-weight);
+  color: rgba(197, 192, 236, 0.7);
+}
+
+.guide-heading {
+  font-size: var(--mui-subtitle1-size);
+  font-weight: var(--mui-subtitle1-weight);
+  line-height: var(--mui-subtitle1-line-height);
+  letter-spacing: var(--mui-subtitle1-letter-spacing);
+  color: #c5c0ec;
+  margin-bottom: 8px;
+}
+
+.guide-text {
+  font-size: var(--mui-body1-size);
+  font-weight: var(--mui-body1-weight);
+  line-height: var(--mui-body1-line-height);
+  letter-spacing: var(--mui-body1-letter-spacing);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.guide-em {
+  color: #fff;
+}
+
+.guide-details {
+  border-top: 1px solid rgba(197, 192, 236, 0.15);
+  padding-top: 16px;
+}
+
+.guide-details-summary {
+  cursor: pointer;
+  font-size: var(--mui-subtitle1-size);
+  font-weight: var(--mui-subtitle1-weight);
+  line-height: var(--mui-subtitle1-line-height);
+  letter-spacing: var(--mui-subtitle1-letter-spacing);
+  color: #c5c0ec;
+  list-style: none;
+  user-select: none;
+}
+
+.guide-details-summary::-webkit-details-marker {
+  display: none;
+}
+
+.guide-details-summary::before {
+  content: '▸ ';
+  display: inline-block;
+  transition: transform 0.15s ease;
+}
+
+.guide-details[open] .guide-details-summary::before {
+  transform: rotate(90deg);
+}
+
+.guide-details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 4px;
+}
+
+.birth-milestone {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(197, 192, 236, 0.25);
+  border-bottom: 1px solid rgba(197, 192, 236, 0.25);
+}
+
+.birth-milestone-body {
+  font-size: var(--mui-body1-size);
+  font-weight: var(--mui-body1-weight);
+  line-height: var(--mui-body1-line-height);
+  letter-spacing: var(--mui-body1-letter-spacing);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.birth-milestone-label {
+  font-size: var(--mui-h6-size);
+  font-weight: var(--mui-h6-weight);
+  line-height: var(--mui-h6-line-height);
+  letter-spacing: 0.2em;
+  color: #c5c0ec;
+}
+
+.birth-milestone-date {
+  margin-top: 12px;
+  font-size: var(--mui-body2-size);
+  font-weight: var(--mui-body2-weight);
+  line-height: var(--mui-body2-line-height);
+  letter-spacing: var(--mui-body2-letter-spacing);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Month Section */
+.month-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.month-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+}
+
+.month-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.month-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(197, 192, 236, 0.15);
+}
+
+.month-label {
+  font-size: var(--mui-h6-size);
+  font-weight: var(--mui-h6-weight);
+  line-height: var(--mui-h6-line-height);
+  letter-spacing: var(--mui-h6-letter-spacing);
+  color: #c5c0ec;
+  margin: 0;
+}
+
+.month-description {
+  font-size: var(--mui-body1-size);
+  font-weight: var(--mui-body1-weight);
+  line-height: var(--mui-body1-line-height);
+  letter-spacing: var(--mui-body1-letter-spacing);
+  color: rgba(255, 255, 255, 0.85);
+  width: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.month-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 0px 16px 16px;
+  box-sizing: border-box;
+  isolation: isolate;
+  overflow: visible;
+}
+
+.month-panel::before {
+  content: '';
+  position: absolute;
+  inset: -32px;
+  border-radius: 12px;
+  background: var(--chart-backdrop-tint, transparent);
+  backdrop-filter: blur(24px) brightness(var(--chart-backdrop-brightness, 0.82));
+  -webkit-backdrop-filter: blur(24px) brightness(var(--chart-backdrop-brightness, 0.82));
+  box-shadow: inset 0 0 0 1px var(--chart-backdrop-outline, transparent);
+  pointer-events: none;
+  z-index: 0;
+  mask-image: radial-gradient(
+    ellipse 98% 94% at 50% 50%,
+    #000 42%,
+    rgba(0, 0, 0, 0.55) 68%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 98% 94% at 50% 50%,
+    #000 42%,
+    rgba(0, 0, 0, 0.55) 68%,
+    transparent 100%
+  );
+}
+
+.month-panel > .month-header,
+.month-panel > .month-body-wrap,
+.month-panel > .guide-diagram,
+.month-panel > .guide-notes,
+.month-panel > .guide-details {
+  position: relative;
+  z-index: 1;
+}
+
+.month-body-wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+.month-body {
+  display: grid;
+  grid-template-columns: max-content max-content max-content;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "mom-label  bars  child-label"
+    "mom-spiral bars  child-spiral";
+  justify-content: center;
+  align-items: end;
+  gap: 16px 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.person-label-mom {
+  grid-area: mom-label;
+  justify-self: center;
+}
+
+.spiral-mom {
+  grid-area: mom-spiral;
+}
+
+.month-bars-wrap {
+  grid-area: bars;
+  grid-row: 1 / span 2;
+  align-self: end;
+  overflow: hidden;
+}
+
+.month-bars-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.month-bar-labels-row {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.month-bar-label-slot {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.month-bar-label-axis {
+  flex-shrink: 0;
+}
+
+.person-label-child {
+  grid-area: child-label;
+  justify-self: center;
+}
+
+.spiral-child {
+  grid-area: child-spiral;
+}
+
+.month-bar-cluster {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.bar-chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bar-center-axis {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.bar-center-axis-chart {
+  position: relative;
+  width: 100%;
+}
+
+.bar-day-tick {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: var(--mui-caption-size);
+  font-weight: var(--mui-caption-weight);
+  line-height: var(--mui-caption-line-height);
+  letter-spacing: var(--mui-caption-letter-spacing);
+  color: #c5c0ec;
+  white-space: nowrap;
+}
+
+.bar-axis-unit {
+  font-size: var(--mui-caption-size);
+  font-weight: var(--mui-caption-weight);
+  line-height: var(--mui-caption-line-height);
+  letter-spacing: var(--mui-caption-letter-spacing);
+  color: #c5c0ec;
+  margin-top: 2px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.person-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.spiral-mom,
+.spiral-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.person-label {
+  font-size: var(--mui-subtitle1-size);
+  font-weight: var(--mui-subtitle1-weight);
+  line-height: var(--mui-subtitle1-line-height);
+  letter-spacing: 0.12em;
+  color: #c5c0ec;
+}
+
+.month-visuals-left,
+.month-visuals-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+img.spiral,
+img.bar {
+  display: block;
+  flex-shrink: 0;
+}
+
+.month-visuals img {
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .guide-notes {
+    grid-template-columns: 1fr;
+  }
+
+  .month-section {
+    width: 100%;
+  }
+
+  .month-content {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .month-panel {
+    padding: 0 12px 12px;
+  }
+
+  .month-header {
+    width: 100% !important;
+  }
+
+  .month-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      "mom-label"
+      "mom-spiral"
+      "child-label"
+      "child-spiral"
+      "bars";
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .month-bars-wrap {
+    grid-row: auto;
+    align-self: center;
+    width: 100%;
+  }
+
+  .month-bar-labels-row {
+    display: flex;
+  }
+
+  .spiral-mom,
+  .spiral-child {
+    width: 100%;
+    max-width: calc(100vw - 48px);
+  }
+
+  .spiral-mom img,
+  .spiral-child img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: calc(100vw - 48px);
+  }
+
+  .month-bar-cluster {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  .birth-milestone {
+    max-width: calc(100vw - 32px);
+    padding: 32px 16px;
+    box-sizing: border-box;
+  }
+}
