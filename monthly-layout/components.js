@@ -62,8 +62,6 @@ export function createGuideSection(
         <h2 class="month-label">読み方</h2>
       </div>
       <p class="month-description">
-        各月は<span class="guide-em">月ラベルと日記</span> →
-        <span class="guide-em">チャート</span>の順に読めます。
         左が<span class="guide-em">母親</span>、右が<span class="guide-em">子ども</span>の睡眠記録です。<br>
         各日の睡眠時間は<span class="guide-em">朝7:00を起点</span>に24時間で計算しています（午前7時から翌朝7時までを1日とみなします）。
       </p>
@@ -72,7 +70,7 @@ export function createGuideSection(
     <figure class="guide-diagram">
       <img
         src="assets/guide-section-diagram.svg?v=20260712"
-        alt="1つの月のチャート模式図。①母親・子どものスパイラル（青=睡眠、黒=覚醒）、②棒グラフ（塗り=最長連続睡眠、線=合計睡眠）、③色の凡例。"
+        alt="1つの月のチャート模式図。①色の凡例。②母親・子どものスパイラル（円弧が睡眠を示す）、③棒グラフ（塗り=最長連続睡眠、線=合計睡眠）"
         loading="lazy"
         decoding="async"
       />
@@ -80,31 +78,32 @@ export function createGuideSection(
     </figure>
 
     <div class="guide-notes" aria-label="図の補足説明">
+
       <section class="guide-note">
-        <h3 class="guide-note-heading"><span class="guide-note-num">①</span> スパイラル</h3>
+        <h3 class="guide-note-heading"><span class="guide-note-num">①</span> 色：1日の最長連続睡眠時間</h3>
         <p class="guide-text">
-          1つの輪が1日。線は入眠から起床まで。
+          1日の最長連続睡眠時間が長いほど青く、短いほど赤くなります。
+        </p>
+      </section>
+      <section class="guide-note">
+        <h3 class="guide-note-heading"><span class="guide-note-num">②</span> スパイラル：睡眠リズム</h3>
+        <p class="guide-text">
+          24時間で一周し、内側から外側に向かって新しい日付を表す螺旋構造です。線は入眠から起床までを示します。
           中央はその月の最長連続睡眠の平均です。
         </p>
       </section>
 
       <section class="guide-note">
-        <h3 class="guide-note-heading"><span class="guide-note-num">②</span> 棒グラフ</h3>
+        <h3 class="guide-note-heading"><span class="guide-note-num">③</span> 棒グラフ：睡眠量</h3>
         <p class="guide-text">
-          1行が1日。<span class="guide-em">細い線</span>は合計睡眠、
-          <span class="guide-em">塗り</span>は最長連続睡眠。
+          1行が1日の睡眠量を表します。<span class="guide-em">枠線</span>は合計睡眠時間、
+          <span class="guide-em">塗り</span>は最長連続睡眠時間です。
           母は右端が0、子は左端が0です。
           1日の区切りは<span class="guide-em">朝7:00</span>です。
         </p>
       </section>
 
-      <section class="guide-note">
-        <h3 class="guide-note-heading"><span class="guide-note-num">③</span> 色</h3>
-        <p class="guide-text">
-          連続睡眠が長いほど青く、短いほど赤くなります。
-          良い／悪いの評価ではありません。
-        </p>
-      </section>
+
     </div>
 
     <details class="guide-details">
